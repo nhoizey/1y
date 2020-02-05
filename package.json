@@ -1,0 +1,16 @@
+{
+  "name": "1y",
+  "description": "",
+  "version": "1.0.0",
+  "author": {
+    "name": "Nicolas Hoizey",
+    "email": "nicolas@hoizey.com",
+    "url": "https://nicolas-hoizey.com/",
+    "twitter": "nhoizey",
+    "github": "nhoizey"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "npx @11ty/eleventy"
+  }
+}
