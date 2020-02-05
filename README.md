@@ -1,4 +1,4 @@
-# **1y**: 11ty, but shorter
+# **1y**: taking the 1t out of 11ty (sorry)
 
 ## What is this?
 
