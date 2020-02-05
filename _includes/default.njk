@@ -21,7 +21,7 @@ body > * {
 }
 
 footer {
-  margin: 2em 0 0;
+  margin: 3em 0 0;
   border-top: 1px solid #ccc;
 }
 </style>
@@ -29,10 +29,11 @@ footer {
 
 <body>
   <main>
-  <h1>{{ title or pkg.name + ' — ' + pkg.description }}</h1>
+  <h1>{{ title or pkg.name }}</h1>
+  <h2>{{ pkg.description }}</h2>
   {{ content | safe }}
   <footer>
-    <p>A short URL manager built with <a href="https://github.com/nhoizey/1y">1y</a>, create <a href="https://github.com/nhoizey/1y#what-do-i-have-to-do-to-use-it">your own</a> now.</p>
+    <p>This short URL manager is built with <strong>1y</strong>, create <a href="https://github.com/nhoizey/1y">your own</a> now.</p>
   </main>
 </body>
 
