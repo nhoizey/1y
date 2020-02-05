@@ -1,4 +1,4 @@
-# **1y**: taking the 1t out of 11ty (sorry)
+# **1y**: taking the 1t out of 11ty 😅
 
 ## What is this?
 
