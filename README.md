@@ -2,9 +2,9 @@
 
 ## What is this?
 
-**1y** is a short URL redirection system built with [Eleventy](https://www.11ty.dev/) (a.k.a. **1**1t**y**), the great JavaScript/Node based Static Site Generator.
+**1y** is a short URL manager built with [Eleventy](https://www.11ty.dev/) (a.k.a. **1**1t**y**), the great JavaScript/Node based Static Site Generator.
 
-This is not really a link "shortener", as it doesn't process anything. Short and long versions of links are managed manually, so that short URLs can be "beautiful".
+This is not a URL "shortener", as it doesn't process anything. Short and long versions of URLs are managed manually, so that short URLs can be "beautiful".
 
 ## How does it work?
 
@@ -17,12 +17,13 @@ This is not really a link "shortener", as it doesn't process anything. Short and
     ---
     ```
 
-Redirection rules are generated in 3 formats to ease usage on different environments:
-- Apache HTTP server with [Alias module](https://httpd.apache.org/docs/current/en/mod/mod_alias.html)
-- Apache HTTP server with [Rewrite module](https://httpd.apache.org/docs/current/en/mod/mod_rewrite.html) (less efficient)
-- [Netlify](https://netlify.com/) hosting with [redirects](https://docs.netlify.com/routing/redirects/)
+Redirection rules are generated in 4 formats to ease usage on different environments:
+- Apache HTTP server with [Alias module](https://httpd.apache.org/docs/current/en/mod/mod_alias.html) in a `.htaccess` file
+- Apache HTTP server with [Rewrite module](https://httpd.apache.org/docs/current/en/mod/mod_rewrite.html) (less efficient) in the same `.htaccess` file
+- [Netlify](https://netlify.com/) hosting with [redirects](https://docs.netlify.com/routing/redirects/) in a `_redirects` file
+- HTML pages with both [HTML redirect](https://css-tricks.com/redirect-web-page/#article-header-id-1) (`<meta>` tag) and [JavaScript Redirect](https://css-tricks.com/redirect-web-page/#article-header-id-2). This is only meant as a last resort, only there if previous formats don't work.
 
-You don't have to deal with any settings to chose which one to use, all 3 are generated at once.
+You don't have to deal with any settings to chose which one to use, all 4 formats are generated at once.
 
 ## What do I have to do to use it?
 
@@ -43,7 +44,7 @@ Each time you push changes to your Github repository (or add files directly with
 1. Click the **Use this template** green button in Github interface to create your own **1y** repository in your Github account
 1. Clone or download the new repository to your local computer
 1. (optional) If you don't have `npm` yet, [install npm](https://www.npmjs.com/get-npm)
-1. Add new short URLs as Markdown files in the `links/` folder
+1. Add new short URLs as Markdown files in the `urls/` folder
 1. Generate the redirection files with this command: `npx @11ty/eleventy`
 
 Generated files to deploy are in the `_site` folder.

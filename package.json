@@ -1,6 +1,6 @@
 {
   "name": "1y",
-  "description": "A template project to build a short link redirector with Eleventy",
+  "description": "A short URL manager",
   "version": "1.0.0",
   "author": {
     "name": "Nicolas Hoizey",

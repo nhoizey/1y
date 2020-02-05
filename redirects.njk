@@ -2,6 +2,6 @@
 permalink: _redirects
 ---
 
-{%- for link in collections.links -%}
-/{{ link.fileSlug }} {{ link.data.url }}
+{%- for url in collections.urls -%}
+/{{ url.fileSlug }} {{ url.data.url }}
 {% endfor %}

@@ -1,0 +1,5 @@
+{
+  "permalink": "/{{ page.fileSlug }}/",
+  "layout": "html-redirect.njk",
+  "tags": "urls"
+}
