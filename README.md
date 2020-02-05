@@ -19,9 +19,9 @@ You don't have to deal with any settings to chose which one to use, all 3 are ge
 
 ## What do I have to do to use it?
 
-This repository is intended to be used as a template for creating your own repository on GitHub.
+This repository is intended to be used as a template for creating your own repository.
 
-### Use Netlify Deploy Button
+### The easiest: use Netlify Deploy Button
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/1y&stack=cms)
 
@@ -29,20 +29,21 @@ Clicking the button above will:
 - create a new repository in your own GitHub account with *1y* code
 - and deploy a copy of this new repository to your Netlify account (you can create an account during this process if you don't have one).
 
-### Use Github
+Each time you push changes to your Github repository (or add files directly with Github's Web interface), Netlify will build the new redirection files.
+
+### If you want to use another hosting service: use the Github template
 
 1. Click the <kbd>Use this template</kbd> green button in Github interface to create your own *1y* repository in your Github account
 1. Clone or download the new repository to your local computer
-1. If you don't have `npm` yet, [install npm](https://www.npmjs.com/get-npm)
+1. (optional) If you don't have `npm` yet, [install npm](https://www.npmjs.com/get-npm)
 1. Add new short URLs as Markdown files in the `links/` folder
-1. Generate the redirection files
- - Either for local development with `npm start`
- - Or for production deployement with `npm run build` (files to deploy will be in the `_site` folder)
+1. Generate the redirection files with this command: `npx @11ty/eleventy`
+
+Generated files to deploy are in the `_site` folder.
 
 ## Contribution
 
-You are welcome and encouraged to make changes to this website by submitting
-pull requests!
+You are welcome and encouraged to make changes to this website by submitting pull requests!
 
 ## License
 
