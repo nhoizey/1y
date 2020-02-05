@@ -21,7 +21,7 @@ Redirection rules are generated in 4 formats to ease usage on different environm
 - Apache HTTP server with [Alias module](https://httpd.apache.org/docs/current/en/mod/mod_alias.html) in a `.htaccess` file
 - Apache HTTP server with [Rewrite module](https://httpd.apache.org/docs/current/en/mod/mod_rewrite.html) (less efficient) in the same `.htaccess` file
 - [Netlify](https://netlify.com/) hosting with [redirects](https://docs.netlify.com/routing/redirects/) in a `_redirects` file
-- HTML pages with both [HTML redirect](https://css-tricks.com/redirect-web-page/#article-header-id-1) (`<meta>` tag) and [JavaScript Redirect](https://css-tricks.com/redirect-web-page/#article-header-id-2). This is only meant as a last resort, only there if previous formats don't work.
+- HTML pages with both [HTML redirect](https://css-tricks.com/redirect-web-page/#article-header-id-1) (`<meta>` tag) and [JavaScript Redirect](https://css-tricks.com/redirect-web-page/#article-header-id-2). This is only meant as a last resort, only there if previous formats don't work. Your HTTP server needs to be able to respond to https://\<your-short-domain\>/**nho** with this actual ressource: https://\<your-short-domain\>/**nho/index.html**
 
 You don't have to deal with any settings to chose which one to use, all 4 formats are generated at once.
 
