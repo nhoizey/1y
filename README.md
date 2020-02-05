@@ -9,7 +9,7 @@ This is not a URL "shortener", as it doesn't process anything. Short and long ve
 ## How does it work?
 
 **1y** generates redirection rules from your set of data, each URL being stored in a Markdown file:
-- the name of the Markdown file (`fileSlug` [in 11ty language](https://www.11ty.dev/docs/data/#page-variable-contents)) is the short URL. For example, the Markdown file `nho.md` you'll find here corresponds to the [https://\<your-short-domain\>/**nho**](https://<your-short-domain>/nho) short URL.
+- the `fileSlug` of the Markdown file (the filename without the extension [in 11ty language](https://www.11ty.dev/docs/data/#page-variable-contents)) is the short URL. For example, the Markdown file `nho.md` you'll find in this template repository is used to create the [https://\<your-short-domain\>/**nho**](https://<your-short-domain>/nho) short URL.
 - the long URL is stored in the file's [Front Matter](https://www.11ty.dev/docs/data-frontmatter/), for example here the `nho.md` file only contains these 3 lines:
     ```markdown
     ---
