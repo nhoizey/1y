@@ -1,18 +1,25 @@
-# 1y: 11ty, but shorter
+# **1y**: 11ty, but shorter
 
 ## What is this?
 
-**1y** is a short URL redirection system built with [Eleventy](https://www.11ty.dev/) (a.k.a. *1*1t*y*), the great JavaScript/Node based Static Site Generator.
+**1y** is a short URL redirection system built with [Eleventy](https://www.11ty.dev/) (a.k.a. **1**1t**y**), the great JavaScript/Node based Static Site Generator.
 
 This is not really a link "shortener", as it doesn't process anything. Short and long versions of links are managed manually, so that short URLs can be "beautiful".
 
 ## How does it work?
 
-*1y* generates redirection rules from your set of data, each URL being stored in a Markdown file. The name of the Markdown file (`fileSlug` [in 11ty language](https://www.11ty.dev/docs/data/#page-variable-contents)) is the short URL, and the long URL is store in the file's [Front Matter](https://www.11ty.dev/docs/data-frontmatter/).
+**1y** generates redirection rules from your set of data, each URL being stored in a Markdown file:
+- the name of the Markdown file (`fileSlug` [in 11ty language](https://www.11ty.dev/docs/data/#page-variable-contents)) is the short URL. For example, the Markdown file `nho.md` you'll find here corresponds to the [https://\<your-short-domain\>/**nho**](https://<your-short-domain>/nho) short URL.
+- the long URL is stored in the file's [Front Matter](https://www.11ty.dev/docs/data-frontmatter/), for example here the `nho.md` file only contains these 3 lines:
+    ```markdown
+    ---
+    url: https://nicolas-hoizey.com/
+    ---
+    ```
 
 Redirection rules are generated in 3 formats to ease usage on different environments:
-- Apache HTTPD server with Alias module
-- Apache HTTPD server with Rewrite module (less efficient)
+- Apache HTTP server with [Alias module](https://httpd.apache.org/docs/current/en/mod/mod_alias.html)
+- Apache HTTP server with [Rewrite module](https://httpd.apache.org/docs/current/en/mod/mod_rewrite.html) (less efficient)
 - [Netlify](https://netlify.com/) hosting with [redirects](https://docs.netlify.com/routing/redirects/)
 
 You don't have to deal with any settings to chose which one to use, all 3 are generated at once.
@@ -33,7 +40,7 @@ Each time you push changes to your Github repository (or add files directly with
 
 ### If you want to use another hosting service: use the Github template
 
-1. Click the <kbd>Use this template</kbd> green button in Github interface to create your own *1y* repository in your Github account
+1. Click the <kbd>Use this template</kbd> green button in Github interface to create your own **1y** repository in your Github account
 1. Clone or download the new repository to your local computer
 1. (optional) If you don't have `npm` yet, [install npm](https://www.npmjs.com/get-npm)
 1. Add new short URLs as Markdown files in the `links/` folder
