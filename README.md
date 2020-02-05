@@ -48,7 +48,7 @@ Each time you push changes to your Github repository (or add files directly with
 1. (optional) If you don't have `npm` yet, [install npm](https://www.npmjs.com/get-npm)
 1. Install `y1` dependencies with `npm install`
 1. Add new short URLs as Markdown files in the `urls/` folder
-1. Generate the redirection files with this command: `npx @11ty/eleventy`
+1. Generate the redirection files with this command: `npm run build`
 
 Generated files to deploy are in the `_site` folder.
 
