@@ -33,7 +33,7 @@ This repository is intended to be used as a template for creating your own repos
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/1y&stack=cms)
 
 Clicking the button above will:
-- create a new repository in your own GitHub account with *1y* code
+- create a new repository in your own GitHub account with **1y** code
 - and deploy a copy of this new repository to your Netlify account (you can create an account during this process if you don't have one).
 
 Each time you push changes to your Github repository (or add files directly with Github's Web interface), Netlify will build the new redirection files.
