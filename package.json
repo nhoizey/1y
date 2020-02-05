@@ -1,6 +1,6 @@
 {
   "name": "1y",
-  "description": "",
+  "description": "A template project to build a short link redirector with Eleventy",
   "version": "1.0.0",
   "author": {
     "name": "Nicolas Hoizey",
@@ -11,6 +11,7 @@
   },
   "license": "MIT",
   "scripts": {
+    "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy"
   }
 }

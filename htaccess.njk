@@ -1,0 +1,19 @@
+---
+permalink: .htaccess
+---
+
+# Using Apache's mod_alias if available
+<IfModule mod_alias.c>
+{%- for link in collections.links %}
+Redirect 301 "/{{ link.fileSlug }}" "{{ link.data.url }}"
+{%- endfor %}
+</IfModule>
+
+# Else, using Apache's mod_rewrite if available
+<IfModule !mod_alias.c>
+<IfModule mod_rewrite.c>
+{%- for link in collections.links %}
+RewriteRule ^{{ link.fileSlug }}$ {{ link.data.url }} [QSA,L,R=301]
+{%- endfor %}
+</IfModule>
+</IfModule>
