@@ -43,10 +43,10 @@ Each time you push changes to your Github repository (or add files directly with
 
 ### If you want to use another hosting service: use the Github template
 
-1. Click the <span class="btn btn-sm btn-primary ml-2">Use this template</span> green button in Github interface to create your own **1y** repository in your Github account
+1. Click the <kbd>Use this template</kbd> green button in Github interface to create your own **1y** repository in your Github account
 1. Clone or download the new repository to your local computer
 1. (optional) If you don't have `npm` yet, [install npm](https://www.npmjs.com/get-npm)
-1. Install `y1` dependencies with `npm install`
+1. Install **y1*$ dependencies with `npm install`
 1. Add new short URLs as Markdown files in the `urls/` folder
 1. Generate the redirection files with this command: `npm run build`
 
