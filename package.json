@@ -11,6 +11,7 @@
   },
   "license": "MIT",
   "scripts": {
+    "start": "rimraf _site && eleventy --serve",
     "build": "rimraf _site && eleventy"
   },
   "devDependencies": {
