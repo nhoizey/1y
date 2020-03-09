@@ -4,19 +4,42 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <title>{{ title or pkg.name + ' — ' + pkg.description }}</title>
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#663399">
 <style>
 body {
   margin: 0;
   padding: 0;
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
   font-family: system-ui, sans-serif;
+
+  background: #a582c2;
+  background: linear-gradient(135deg, #639, #a582c2);
+  color: #fff;
+}
+
+a:link, a:visited {
+  color: #fff;
+  font-weight: bold;
+  margin: 0 .1em;
+  padding: .2em;
+
+}
+
+a:hover, a:active {
+  background-color: white;
+  color: #639;
+  text-decoration: none;
 }
 
 body > * {
+  width: 50vw;
   max-width: 40em;
 }
 
@@ -29,12 +52,12 @@ footer {
 
 <body>
   <main>
-  <h1>{{ title or pkg.name }}</h1>
-  <h2>{{ pkg.description }}</h2>
-  {{ content | safe }}
-  <footer>
-    <p>This short URL manager is built with <strong>1y</strong>, create <a href="https://github.com/nhoizey/1y">your own</a> now.</p>
+    <h1>{{ title or pkg.name }} — {{ pkg.description }}</h2>
+    {{ content | safe }}
   </main>
+  <footer>
+    <p>This short URL manager is built with <a href="https://github.com/nhoizey/1y">1y</a>.</p>
+  </footer>
 </body>
 
 </html>
