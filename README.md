@@ -1,5 +1,7 @@
 # **1y**: taking the 1t out of 11ty 😅
 
+<img src="https://raw.githubusercontent.com/nhoizey/1y/master/logo.png" alt="1y logo" width="128" height="128" align="right" />
+
 ## What is this?
 
 **1y** is a short URL manager built with [Eleventy](https://www.11ty.dev/) (a.k.a. **1**1t**y**), the great JavaScript/Node based Static Site Generator.
