@@ -21,6 +21,8 @@ This is not a URL "shortener", as it doesn't process anything. Short and long ve
 
 So for this example, when you go to [https://\<your-short-domain\>/**nho**](https://<your-short-domain>/nho), it redirects you to <https://nicolas-hoizey.com/>.
 
+*If you don't want to manage many Markdown files for your short URLs, you can try [Suri](https://github.com/jstayton/suri), another Eleventy based short URL manager, which uses one single JSON file.*
+
 Redirection rules are generated in 4 formats to ease usage on different environments:
 - Apache HTTP server with [Alias module](https://httpd.apache.org/docs/current/en/mod/mod_alias.html) in a `.htaccess` file
 - Apache HTTP server with [Rewrite module](https://httpd.apache.org/docs/current/en/mod/mod_rewrite.html) (less efficient) in the same `.htaccess` file
