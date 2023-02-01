@@ -16,6 +16,6 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
-    "rimraf": "^3.0.2"
+    "rimraf": "^4.1.2"
   }
 }
