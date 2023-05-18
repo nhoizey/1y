@@ -2,6 +2,9 @@
 
 <img src="https://raw.githubusercontent.com/nhoizey/1y/master/logo.png" alt="1y logo" width="128" height="128" align="right" />
 
+[![GitHub stars](https://img.shields.io/github/stars/nhoizey/1y.svg?style=for-the-badge&logo=github)](https://github.com/nhoizey/1y/stargazers)
+[![Follow @nhoizey@mamot.fr](https://img.shields.io/mastodon/follow/000262395?domain=https%3A%2F%2Fmamot.fr&style=for-the-badge&logo=mastodon&logoColor=white&color=6364FF)](https://mamot.fr/@nhoizey)
+
 ## What is this?
 
 **1y** is a short URL manager built with [Eleventy](https://www.11ty.dev/) (a.k.a. **1**1t**y**), the great JavaScript/Node based Static Site Generator.
@@ -11,19 +14,21 @@ This is not a URL "shortener", as it doesn't process anything. Short and long ve
 ## How does it work?
 
 **1y** generates redirection rules from your set of data, each URL being stored in a Markdown file:
+
 - the `fileSlug` of the Markdown file (the filename without the extension [in 11ty language](https://www.11ty.dev/docs/data/#page-variable-contents)) is the short URL. For example, the Markdown file `nho.md` you'll find in this template repository is used to create the [https://\<your-short-domain\>/**nho**](https://<your-short-domain>/nho) short URL.
 - the long URL is stored in the file's [Front Matter](https://www.11ty.dev/docs/data-frontmatter/), for example here the `nho.md` file only contains these 3 lines:
-    ```markdown
-    ---
-    url: https://nicolas-hoizey.com/
-    ---
-    ```
+  ```markdown
+  ---
+  url: https://nicolas-hoizey.com/
+  ---
+  ```
 
 So for this example, when you go to [https://\<your-short-domain\>/**nho**](https://<your-short-domain>/nho), it redirects you to <https://nicolas-hoizey.com/>.
 
-*If you don't want to manage many Markdown files for your short URLs, you can try [Suri](https://github.com/jstayton/suri), another Eleventy based short URL manager, which uses one single JSON file.*
+_If you don't want to manage many Markdown files for your short URLs, you can try [Suri](https://github.com/jstayton/suri), another Eleventy based short URL manager, which uses one single JSON file._
 
 Redirection rules are generated in 4 formats to ease usage on different environments:
+
 - Apache HTTP server with [Alias module](https://httpd.apache.org/docs/current/en/mod/mod_alias.html) in a `.htaccess` file
 - Apache HTTP server with [Rewrite module](https://httpd.apache.org/docs/current/en/mod/mod_rewrite.html) (less efficient) in the same `.htaccess` file
 - [Netlify](https://netlify.com/) hosting with [redirects](https://docs.netlify.com/routing/redirects/) in a `_redirects` file
@@ -40,6 +45,7 @@ This repository is intended to be used as a template for creating your own repos
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/1y&stack=cms)
 
 Clicking the button above will:
+
 - create a new repository in your own GitHub account with **1y** code
 - and deploy a copy of this new repository to your Netlify account (you can create an account during this process if you don't have one).
 
