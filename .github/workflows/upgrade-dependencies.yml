@@ -1,0 +1,16 @@
+name: Upgrade dependencies
+
+on:
+  schedule:
+    # https://crontab.guru/#0_8_*_*_1
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: upgrade-dependencies
+  cancel-in-progress: true
+
+jobs:
+  upgrade-dependencies:
+    uses: nhoizey/upgrade-dependencies/.github/workflows/upgrade-dependencies.yml@main
+    secrets: inherit
