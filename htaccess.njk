@@ -5,7 +5,7 @@ permalink: .htaccess
 # Using Apache's mod_alias if available
 <IfModule mod_alias.c>
 {%- for url in collections.urls %}
-Redirect 301 "/{{ url.fileSlug }}" "{{ url.data.url }}"
+Redirect 301 "/{{ url.fileSlug }}" "{{ url.data.url | safe }}"
 {%- endfor %}
 </IfModule>
 
@@ -13,7 +13,7 @@ Redirect 301 "/{{ url.fileSlug }}" "{{ url.data.url }}"
 <IfModule !mod_alias.c>
 <IfModule mod_rewrite.c>
 {%- for url in collections.urls %}
-RewriteRule ^{{ url.fileSlug }}$ {{ url.data.url }} [QSA,L,R=301]
+RewriteRule ^{{ url.fileSlug }}$ {{ url.data.url | safe }} [QSA,L,R=301]
 {%- endfor %}
 </IfModule>
 </IfModule>
